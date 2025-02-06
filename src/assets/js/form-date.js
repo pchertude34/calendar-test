@@ -14,8 +14,9 @@ function addDatePickerToForm(event) {
 
   if (existingDatePickerCount >= 3) return;
 
-  const dateInputGroup = document.createElement('div');
+  const dateInputGroup = document.createElement('fieldset');
   dateInputGroup.classList.add('cs-date-input-group');
+  dateInputGroup.name = `date-${existingDatePickerCount + 1}`;
 
   // create the date label and input
   const dateLabel = document.createElement('label');
