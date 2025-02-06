@@ -16,7 +16,7 @@ function addDatePickerToForm(event) {
 
   const dateInputGroup = document.createElement('fieldset');
   dateInputGroup.classList.add('cs-date-input-group');
-  dateInputGroup.name = `date-${existingDatePickerCount + 1}`;
+  // dateInputGroup.name = `date-${existingDatePickerCount + 1}`;
 
   // create the date label and input
   const dateLabel = document.createElement('label');
@@ -25,6 +25,7 @@ function addDatePickerToForm(event) {
   const dateInput = document.createElement('input');
   dateInput.classList.add('cs-input');
   dateInput.type = 'date';
+  dateInput.name = `date-${existingDatePickerCount + 1}`;
   // Set the minimum date to today
   dateInput.min = new Date().toISOString().split('T')[0];
 
@@ -36,6 +37,7 @@ function addDatePickerToForm(event) {
 
   const timeInput = document.createElement('select');
   timeInput.classList.add('cs-select');
+  timeInput.name = `time-${existingDatePickerCount + 1}`;
 
   const morningOption = document.createElement('option');
   morningOption.value = 'morning';
