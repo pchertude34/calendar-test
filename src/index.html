@@ -79,14 +79,17 @@ eleventyNavigation:
         <div class="cs-container">
             <!--Copy and paste any iframe from Google Maps-->
             <!-- Google Calendar Appointment Scheduling begin -->
+            {# <div class="cs-iframe-container"> #}
+
             <iframe
                 src="https://calendar.google.com/calendar/embed?height=600&wkst=1&ctz=America%2FLos_Angeles&showPrint=0&src=cGF5dG9uX2NoZXJ0dWRlQHdlc3Rjb2FzdHdlYmRlc2lnbnMuY29t&color=%23039BE5"
-                style="border:solid 1px #777"
-                width="800"
-                height="600"
+                style="border:0;"
+                width="600"
+                height="450"
                 frameborder="0"
                 scrolling="no"
             ></iframe>
+            {# </div> #}
             <!-- end Google Calendar Appointment Scheduling -->
             <div class="cs-wrapper">
                 <div class="cs-content">
@@ -149,7 +152,7 @@ eleventyNavigation:
                             <option value="Service 4">Services</option>
                         </select>
                     </label>
-                    <div class="cs-date-input-container" id="date-input-container">
+                    {# <div class="cs-date-input-container" id="date-input-container">
 
                         <fieldset class="cs-date-input-group">
                             <label class="cs-label">
@@ -217,8 +220,24 @@ eleventyNavigation:
                                     <option value="afternoon">Afternoon</option>
                             </select>
                         </fieldset>
-                    </div>
-                    <button class="cs-date-input-add-date-button" id="add-date-button">+</button>
+                    </div> #}
+                    {# <button
+                        class="cs-date-input-add-date-button"
+                        id="add-date-button"
+                    >
+                        +
+                    </button> #}
+
+                    <label class="cs-label cs-label-full">
+                        <fieldset class="cs-date-container" name="date-1">
+                            <input type="date" class="cs-input" required />
+                            <select class="cs-select" required>
+                                <option value="morning">Morning</option>
+                                <option value="afternoon">Afternoon</option>
+                            </select>
+                        </fieldset>
+                    </label>
+
                     <label class="cs-label cs-message">
                         <textarea
                             class="cs-input cs-textarea"

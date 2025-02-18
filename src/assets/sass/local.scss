@@ -60,9 +60,8 @@
             max-width: calc(770 / 16 * 1rem);
             /* prevents flexbox from affecting height and width */
             box-sizing: border-box;
-            display: flex;
-            align-items: left;
-            // grid-template-columns: repeat(12, 1fr);
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
             justify-content: center;
             align-items: center;
             flex-wrap: wrap;
@@ -95,6 +94,27 @@
             gap: calc(4 / 16 * 1rem);
         }
 
+        .cs-label-full {
+            font-size: calc(16 / 16 * 1rem);
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cs-date-container {
+            display: flex;
+            justify-content: space-between;
+            gap: calc(12 / 16 * 1rem);
+            grid-column: span 12;
+            width: 100%;
+            border: none;
+        }
+
+        .cs-date-label {
+            font-size: calc(16 / 16 * 1rem);
+            width: 100%;
+        }
+
         .cs-input,
         .cs-select {
             font-size: calc(16 / 16 * 1rem);
@@ -110,35 +130,6 @@
 
             &::placeholder {
                 color: #767676;
-            }
-        }
-
-        .cs-date-input-group {
-            display: flex;
-            gap: calc(12 / 16 * 1rem);
-        }
-
-        .cs-date-input-container {
-            display: flex;
-            width: 100%;
-            flex-direction: column;
-            justify-content: flex-start;
-            gap: calc(4 / 16 * 1rem);
-            align-items: center;
-        }
-
-        .cs-date-input-add-date-button {
-            border-radius: 50%;
-            width: 1.5rem;
-            height: 1.5rem;
-            background-color: var(--primary);
-            border: 1px solid #767676;
-            transition: all 0.3s;
-            margin-left: 2rem;
-
-            &:hover {
-                cursor: pointer;
-                background-color: var(--primaryDark);
             }
         }
 
@@ -240,6 +231,9 @@
             &.cs-message {
                 grid-column: span 12;
             }
+        }
+        .cs-label-full {
+            grid-column: span 12;
         }
     }
 }
