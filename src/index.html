@@ -229,9 +229,14 @@ eleventyNavigation:
                     </button> #}
 
                     <label class="cs-label cs-label-full">
-                        <fieldset class="cs-date-container" name="date-1">
-                            <input type="date" class="cs-input" required />
-                            <select class="cs-select" required>
+                        <fieldset class="cs-date-container">
+                            <input
+                                type="date"
+                                name="date-1"
+                                class="cs-input"
+                                required
+                            />
+                            <select class="cs-select" required name="time-1">
                                 <option value="morning">Morning</option>
                                 <option value="afternoon">Afternoon</option>
                             </select>
